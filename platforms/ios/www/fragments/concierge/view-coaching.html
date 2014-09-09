@@ -1,0 +1,53 @@
+<div data-role="content" class="ui-content-fullpage">
+
+	<div data-role="tabs">
+		
+		<div data-role="navbar" data-iconpos="left" >
+			<ul>
+			  <li><a href="#coaching-capture" data-ajax="false" data-icon="eye" class="ui-btn-active ui-state-persist">Capture</a></li>
+			  <li><a href="#coaching-listen" data-ajax="false" data-icon="cloud" >Listen</a></li>
+			</ul>
+		</div>
+		
+		<div id="coaching-capture" class="ui-body-d ui-content ui-content-fullpage">
+			<div class="placeholder-content" style="width:500px">
+				<embed type="image/svg+xml" id="svg" src="svg/appbar.people.sensor.svg" height="300" width="300"></embed>
+				<br/>
+				<span>InStore Coaching Capture</span>
+		
+				<div>
+					<a id="btnConnect" data-role="button" data-inline="true"  data-theme="a">Connect Cloud</a>
+					<a id="btnCall" data-role="button" data-inline="true"  data-theme="a">Start Session</a>			
+					<a id="btnDisconnect" data-role="button" data-inline="true"  data-theme="a">End Session</a>
+					<br/>
+					<span id="statusMessage"></span>
+					<br/>
+					<img style="width:200px; display:none" id="imgRecording" src="images/record.gif"/>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="coaching-listen" class="ui-body-d ui-content ui-content-fullpage">
+		
+			<div class="placeholder-content" style="width:600px">
+				<div id="page-graphic"><embed type="image/svg+xml" id="svg" src="svg/appbar.skydrive.download.svg" height="300" width="300"></embed></div>
+				<br/>
+				<span>InStore Coaching Review</span><br/>
+				<a id="btnRetrieve" data-role="button" data-inline="true"  data-theme="a">Show Recordings</a>
+				<a id="btnReset" data-role="button" data-inline="true" style="display:none" data-theme="a">Reset</a>
+				<br/><span id="statusMessage"></span>
+				
+				<ul id="coaching-recordings-ul" data-role="listview" data-inset="true">
+					<li data-role="list-divider">List of recordings</li>
+					<li>First press <strong>Show Recordings</strong> button</li>
+				</ul>
+				
+			</div>
+		</div>
+		
+		
+		
+	</div>
+	
+</div>

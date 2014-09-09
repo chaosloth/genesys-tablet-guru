@@ -1,0 +1,36 @@
+<div data-role="content" class="ui-content-fullpage">
+
+	<div data-role="tabs">
+		
+		<div data-role="navbar" data-iconpos="left" >
+			<ul>
+				<li><a href="#training-iframe" data-ajax="false" data-icon="info" class="ui-btn-active ui-state-persist">Training</a></li>
+				<li><a href="#training-actions" data-ajax="false" data-icon="grid">Actions</a></li>
+			</ul>
+		</div>
+		
+		<div id="training-iframe" class="ui-body-d ui-content ui-content-fullpage">
+			<iframe concierge-iframe src="fragments/concierge/placeholder-training.html"></iframe>
+		</div>
+		
+		
+		<div id="training-actions" class="ui-body-d ui-content ui-content-fullpage">
+
+			<div class="placeholder-content" style="width:600px">
+				<embed type="image/svg+xml" id="svg" src="svg/appbar.puzzle.round.svg" height="300" width="300"></embed>
+
+				<fieldset data-role="controlgroup">
+					<legend>Please acknowledge that you have read the training</legend>
+					<input type="checkbox" name="confirm-recording" id="confirm-recording" class="custom">
+					<label for="confirm-recording">Acknowledge</label>
+				</fieldset>
+
+				<div>
+					<input data-inline="true" type="button" data-icon="forbidden" data-iconpos="right" value="Complete" class="btnCompleteWorkitem ui-btn-e" style="display:none"/>
+				</div>
+			</div>
+
+		</div>
+		
+	</div>
+</div>

@@ -1,0 +1,39 @@
+
+<!-- START: CONTENT (MAIN PAGE) -->
+<div data-role="content" class="concierge-content">
+
+	<!-- START TAB: (IFRAME) External content -->
+	<div id="workspace-tab" class="tab-content ui-content-fullpage">
+		<iframe id="workspace-tab-iframe" src="" style="width:100%; height:100%" class="tab-content">
+		</iframe>
+	</div>
+	<!-- END TAB: (IFRAME) External content -->
+
+	<!-- START TAB: Workbins -->
+	<div id="workbin-tab" class="tab-content ui-content-fullpage">
+		<p id="noWorkbinTxt">No Workbins Configured</p>
+	</div>
+	<!-- END TAB: Workbins -->
+
+	<!-- START TAB: Active Interaction -->
+	<div id="active-interaction-tab" class="tab-content ui-content-fullpage">
+	
+	
+		<div data-role="header" data-theme="c">
+			<div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-right">
+				<!-- <a data-role="button" id="btnSaveTask" data-icon="back" data-iconpos="right">Save</a> -->
+				<!-- <a data-role="button" id="btnStopTask" data-icon="check" data-iconpos="right">Complete</a> -->
+			</div>
+			<h6><span id="displaymessage"/></span></h6>
+		</div>
+		
+		
+		<iframe id="interaction-url" class="ui-content-fullpage" style="width:100%;" src="fragments/concierge/placeholder-interaction-preview.html"></iframe>
+		
+		<div id="interaction-fragment"></div>
+		
+	</div>
+	<!-- END TAB: Active Interaction -->
+
+</div>
+<!-- END: CONTENT (MAIN PAGE) -->

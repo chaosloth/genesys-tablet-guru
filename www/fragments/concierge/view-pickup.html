@@ -1,0 +1,252 @@
+
+<div class="clear" style="padding: 10px;">
+	<!-- **** TABS **** -->
+	<div data-role="tabs" id="tabs-pickup">
+		<div data-role="navbar">
+			<ul>
+				<li><a id="task-tab-1" class="ui-btn-active ui-state-persist" href="#pickup-info" data-ajax="false">Pickup Details</a></li>
+				<li><a href="#pickup-recording" data-ajax="false">Recording</a></li>
+				<li><a id="task-tab-addon" href="#pickup-addon" data-ajax="false">Add ons</a></li>
+				<li><a href="#pickup-survey" data-ajax="false">Survey</a></li>
+				<li><a href="#pickup-actions" data-ajax="false">Actions</a></li>
+			</ul>
+		</div>
+
+		<form id="formPickup" data-ajax="false">
+			<input type="hidden" id="txtPickupFirstName" name="FirstName" value=""/>
+			<input type="hidden" id="txtPickupLastName" name="LastName" value=""/>
+			<input type="hidden" id="txtPickupSelfServiceOnly" name="self_service_only" value="Yes"/>
+			<input type="hidden" id="txtPickupOpportunityValue" name="opportunity_value" value="0"/>
+
+			<!-- **** TAB - PICKUP INFORMATION **** -->
+			<div id="pickup-info" class="ui-body-d ui-content ui-content-fullpage">
+
+				<h3 class="ui-bar ui-bar-e ui-corner-all"><span id="txtPickupName"/></span> - 100 Point ID check required</h3>
+
+				<label for="txtPickupDevice">Device:</label>
+				<input type="text" name="Device" id="txtPickupDevice" placeholder="Device" />
+
+
+				<div class="ui-field-contain">
+					<fieldset data-role="controlgroup">
+						<legend>Choose one or items to make up the 100 point ID check</legend>
+						<input type="checkbox" name="ident-existing-customer" id="ident-1" class="custom">
+						<label for="ident-1">Existing Customer (100)</label>
+
+						<input type="checkbox" name="ident-license" id="ident-2" class="custom">
+						<label for="ident-2">Drivers License (70)</label>
+
+						<input type="checkbox" name="ident-medicare" id="ident-3" class="custom">
+						<label for="ident-3">Medicare Card (50)</label>
+
+						<input type="checkbox" name="ident-utility" id="ident-4" class="custom">
+						<label for="ident-4">Utility Bill (50)</label>
+
+						<input type="checkbox" name="ident-passport" id="ident-5" class="custom">
+						<label for="ident-5">Passport (100)</label>
+
+						<input type="checkbox" name="ident-other" id="ident-5" class="custom">
+						<label for="ident-5">Other</label>
+					</fieldset>
+				</div>
+
+			</div>
+
+			<!-- **** TAB - RECORDING **** -->
+			<div id="pickup-recording" class="ui-body-d ui-content ui-content-fullpage">
+				<div id="coaching-capture">
+					<div class="placeholder-content" style="width:600px">
+						<embed type="image/svg+xml" id="svg" src="svg/appbar.people.sensor.svg" height="300" width="300"></embed>
+
+						<fieldset data-role="controlgroup">
+							<legend>Do you agree to this interaction being recorded for training purposes</legend>
+							<input type="checkbox" name="confirm-recording" id="confirm-recording" class="custom">
+							<label for="confirm-recording">Agree to interaction recording</label>
+						</fieldset>
+
+						<div>
+							<a id="btnConnect" data-role="button" data-inline="true"  data-theme="a">Connect Cloud</a>
+							<a id="btnCall" data-role="button" data-inline="true"  data-theme="a">Start Session</a>	
+							<a id="btnPause" data-role="button" data-inline="true"  data-theme="a">Pause</a>
+							<a id="btnDisconnect" data-role="button" data-inline="true"  data-theme="a">End Session</a>
+							<br/>
+							<span id="statusMessage"></span>
+							<br/>
+							<img style="width:200px; display:none" id="imgRecording" src="images/record.gif"/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- **** TAB - PICKUP ADDONS **** -->
+			<div id="pickup-addon" class="ui-body-d ui-content ui-content-fullpage">
+				<div data-role="content" data-theme="a">
+					<h3>Add the right accessory to your new phone...</h3>
+					<p>Spend $50 or more right now and we'll wave the first months bill !</p>
+
+					<div class="suggestion spotify">
+						<div class="ui-block-a" style="padding:5px; width:70%">
+							<h4>Spotify Gift Card</h4>
+							<p>Get new music with Spotify ! Listen to your digital music on demand - all the latest hits and the old songs you love</p>
+						</div>
+						<div class="ui-block-b">
+							<p>$10</p>
+							<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+								<input type="radio" name="pickup_addon_spotify" id="pickup-addon-1a" value="yes" >
+								<label for="pickup-addon-1a">Yes</label>
+								<input type="radio" name="pickup_addon_spotify" id="pickup-addon-1b" value="no" checked="checked">
+								<label for="pickup-addon-1b">No</label>
+								<input type="radio" name="pickup_addon_spotify" id="pickup-addon-1c" value="later">
+								<label for="pickup-addon-1c">Maybe later</label>
+							</fieldset>
+						</div>
+					</div>
+
+					<div class="suggestion bluetooth">
+						<div class="ui-block-a" style="padding:5px; width:70%">
+							<h4>Bluetooth</h4>
+							<p>Use your Voice to answer, ignore or make calls simply by speaking. Easy to use by talking you through the setup steps in either English, French or Spanish. Sounds great with clear audio. Amazing battery life with 20 hours between charges and 900 hours of standby time.</p>
+						</div>
+						<div class="ui-block-b">
+							<p>$25</p>
+							<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+								<input type="radio" name="pickup_addon_bluetooth" id="pickup-addon-2a" value="yes" >
+								<label for="pickup-addon-2a">Yes</label>
+								<input type="radio" name="pickup_addon_bluetooth" id="pickup-addon-2b" value="no" checked="checked">
+								<label for="pickup-addon-2b">No</label>
+								<input type="radio" name="pickup_addon_bluetooth" id="pickup-addon-2c" value="later">
+								<label for="pickup-addon-2c">Maybe later</label>
+							</fieldset>
+						</div>
+					</div>
+
+					<div class="suggestion mifi">
+						<div class="ui-block-a" style="padding:5px; width:70%">
+							<h4>Wireless MiFi</h4>
+							<p>Wi-Fi 4G is the next generation of mobile Wi-Fi router that connects up to 5 Wi-Fi enabled devices to the 4G Network. With 4G speeds !!!</p>
+						</div>
+						<div class="ui-block-b">
+							<p>$50</p>
+							<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+								<input type="radio" name="pickup_addon_mifi" id="pickup-addon-3a" value="yes" >
+								<label for="pickup-addon-3a">Yes</label>
+								<input type="radio" name="pickup_addon_mifi" id="pickup-addon-3b" value="no" checked="checked">
+								<label for="pickup-addon-3b">No</label>
+								<input type="radio" name="pickup_addon_mifi" id="pickup-addon-3c" value="later">
+								<label for="pickup-addon-3c">Maybe later</label>
+							</fieldset>
+						</div>
+					</div>
+
+
+					<div class="suggestion data-plan-50">
+						<div class="ui-block-a" style="padding:5px; width:70%">
+							<h4>Data Plan 50GB</h4>
+							<p>Add 50GB of data to your new device, valid for 3 months</p>
+						</div>
+						<div class="ui-block-b">
+							<p>$50</p>
+							<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+								<input type="radio" name="pickup_addon_data_50" id="pickup-addon-4a" value="yes" >
+								<label for="pickup-addon-4a">Yes</label>
+								<input type="radio" name="pickup_addon_data_50" id="pickup-addon-4b" value="no" checked="checked">
+								<label for="pickup-addon-4b">No</label>
+								<input type="radio" name="pickup_addon_data_50" id="pickup-addon-4c" value="later">
+								<label for="pickup-addon-4c">Maybe later</label>
+							</fieldset>
+						</div>
+					</div>
+
+					<div class="suggestion data-plan-100">
+						<div class="ui-block-a" style="padding:5px; width:70%">
+							<h4>Data Plan 100GB</h4>
+							<p>Add 100GB of data to your new device, valid for 2 months. Download hundreds of songs and videos. Great value</p>
+						</div>
+						<div class="ui-block-b">
+							<p>$70</p>
+							<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+								<input type="radio" name="pickup_addon_data_100" id="pickup-addon-5a" value="yes" >
+								<label for="pickup-addon-5a">Yes</label>
+								<input type="radio" name="pickup_addon_data_100" id="pickup-addon-5b" value="no" checked="checked">
+								<label for="pickup-addon-5b">No</label>
+								<input type="radio" name="pickup_addon_data_100" id="pickup-addon-5c" value="later">
+								<label for="pickup-addon-5c">Maybe later</label>
+							</fieldset>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+			<!-- **** TAB - PICKUP SURVEY **** -->
+			<div id="pickup-survey" class="ui-body-d ui-content ui-content-fullpage">
+				<div data-role="content" data-theme="a">
+					<h3>On a scale of 0 to 5 what answers would you give to the following questions...</h3>
+					<label for="pickup-slider-1">Your own personal effort required to complete this transaction?</label>
+					<input type="range" name="survey_effort" id="pickup-slider-1" value="3" min="0" max="5" data-theme="a" />
+
+					<label for="pickup-slider-2">Your ability to get information about the product?</label>
+					<input type="range" name="survey_information" id="pickup-slider-2" value="3" min="0" max="5" data-theme="a" />
+
+					<label for="pickup-slider-3">Likelihood of talking to someone else about this experience?</label>
+					<input type="range" name="survey_nps" id="pickup-slider-3" value="3" min="0" max="5" data-theme="a" />
+
+					<label for="pickup-slider-4">Accountability of the sales staff?</label>
+					<input type="range" name="survey_sales_staff" id="pickup-slider-4" value="3" min="0" max="5" data-theme="a" />
+
+					<label for="txtSurveyNotes">Notes:</label>
+					<textarea name="Notes" id="txtSurveyNotes" rows="4"  placeholder="Notes"></textarea>
+				</div>
+			</div>
+
+			<!-- **** TAB - PICKUP ACTIONS **** -->
+			<div id="pickup-actions" class="ui-body-d ui-content ui-content-fullpage">
+				<div data-role="content" data-theme="a">
+
+					<input type="text" name="PhoneNumber" id="txtPickupAccountID" placeholder="Account Identifier" />
+					<input type="text" name="EmailAddress" id="txtPickupEmail" placeholder="customer@service.provider.com" />
+
+					<div class="ui-field-contain">
+						<fieldset data-role="controlgroup" data-iconpos="right">
+							<legend>Welcome Email Messages</legend>
+							<input type="radio" name="SS_name" id="pickup-email-1" value="Voicemail Setup">
+							<label for="pickup-email-1">Voicemail Setup</label>
+							<input type="radio" name="SS_name" id="pickup-email-2" value="Unlock your device">
+							<label for="pickup-email-2">Unlock your device</label>
+							<input type="radio" name="SS_name" id="pickup-email-3" value="Activate SIM">
+							<label for="pickup-email-3">Activate SIM</label>
+							<input type="radio" name="SS_name" id="pickup-email-4" value="International Roaming">
+							<label for="pickup-email-4">International Roaming</label>
+						</fieldset>
+					</div>
+
+					<div class="ui-field-contain">
+						<fieldset data-role="controlgroup"  data-type="horizontal">
+							<legend>Sales made from this interaction</legend>
+							<input type="radio" name="sale_made" id="pickup_sale_made-1" value="No" checked="checked"/>
+							<label for="pickup_sale_made-1">No</label>
+							<input type="radio" name="sale_made" id="pickup_sale_made-2" value="Yes"/>
+							<label for="pickup_sale_made-2">Yes</label>
+						</fieldset>
+					</div>
+
+					<table>
+						<tr>
+							<td><a readonly="true" data-inline="true" type="text" id="formPickupMessage" value="Not Submitted"/></td>
+							<td><input data-inline="true" type="button" id="btnPickupCancel" data-icon="delete" data-iconpos="right" value="Clear"/></td>
+							<td><input data-inline="true" type="button" id="btnPickupCreate" data-icon="check" data-iconpos="right" class="ui-btn-b" value="Create"/></td>
+							<td><input data-inline="true" type="button" data-icon="forbidden" data-iconpos="right" value="Complete" class="btnCompleteWorkitem ui-btn-e" style="display:none"/></td>
+						</tr>
+					</table>
+				</div>
+
+			</div>
+
+			<input type="hidden" name="TaskType" value="Pick Up"/>
+			<input type="hidden" name="concierge-fragment" value="pickup"/>
+			<input type="hidden" name="IWS_DisplayMessage" value="Customer Pick Up"/>
+
+		</form>
+	</div>
+</div>

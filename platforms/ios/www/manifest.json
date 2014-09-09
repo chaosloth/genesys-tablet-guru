@@ -1,0 +1,12 @@
+{
+  "name": "Guru",
+  "version": "0.0.3.1",
+  "app": {
+    "launch":{
+      "local_path": "index.html"
+    }
+  },
+  "icons": {
+    "128": "res/icons/crosswalk-icon-128.png"
+  }
+}

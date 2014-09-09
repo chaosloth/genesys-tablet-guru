@@ -1,0 +1,184 @@
+<div class="clear" style="padding: 10px;">
+  <form id="formWalkin" data-ajax="false">
+  	
+	<!-- **** TAB - BAR AND TABS **** -->
+	<div data-role="tabs" id="walkin-tabs">
+	
+	  <!-- **** TAB - BAR NAV -->
+	  <div data-role="navbar">
+		<ul>
+		  <li><a href="#walkin-id" id="walkin-tab-1" class="ui-btn-active ui-state-persist" data-ajax="false">Identification</a></li>
+		  <li><a href="#walkin-qualification" data-ajax="false">Qualification</a></li>
+		  <li><a href="#walkin-needs" data-ajax="false">Needs</a></li>
+		  <li><a href="#walkin-actions" data-ajax="false">Closure</a></li>
+		</ul>
+	  </div>
+	  
+	  <!-- **** TAB - IDENTIFICATION **** -->
+	  <div id="walkin-id" class="ui-body-d ui-content ui-content-fullpage">
+		
+		<input type="text" name="PhoneNumber" id="txtAccountID" placeholder="Account Identifier" />
+		<input type="text" name="FirstName" id="txtCustomerFirstName" placeholder="First Name" />
+		<input type="text" name="LastName" id="txtCustomerLastName" placeholder="Last name" />
+		<input type="text" name="EmailAddress" id="txtCustomerEmail" placeholder="customer@service.provider.com" />
+		
+		<h3 class="ui-bar ui-bar-b ui-corner-all">100 Point ID check</h3>
+		<div class="ui-field-contain">
+		  <fieldset data-role="controlgroup">
+			<legend>Choose one or items to make up the 100 point ID check</legend>
+			<input type="checkbox" name="ident-existing-customer" id="ident-1" class="custom">
+			<label for="ident-1">Existing Customer (100)</label>
+
+			<input type="checkbox" name="ident-license" id="ident-2" class="custom">
+			<label for="ident-2">Drivers License (70)</label>
+
+			<input type="checkbox" name="ident-medicare" id="ident-3" class="custom">
+			<label for="ident-3">Medicare Card (50)</label>
+
+			<input type="checkbox" name="ident-utility" id="ident-4" class="custom">
+			<label for="ident-4">Utility Bill (50)</label>
+			
+			<input type="checkbox" name="ident-passport" id="ident-5" class="custom">
+			<label for="ident-5">Passport (100)</label>
+								
+			<input type="checkbox" name="ident-other" id="ident-5" class="custom">
+			<label for="ident-5">Other</label>
+
+		  </fieldset>
+		</div>
+	  </div>
+	  
+	  <!-- **** TAB - QUALIFICATION **** -->
+	  <div id="walkin-qualification" class="ui-body-d ui-content ui-content-fullpage">
+		<label for="slider1">Opportunity value:</label>
+		<input type="range" name="opportunity_value" id="slider1" value="50" min="0" max="100" data-theme="a" />
+		
+		<div class="ui-field-contain">
+		  <fieldset data-role="controlgroup">
+			<legend>Choose one or more carrier the customer has agreements with</legend>
+			<input type="checkbox" name="carrier-telstra" id="carrier-1" class="custom">
+			<label for="carrier-1">Telstra</label>
+
+			<input type="checkbox" name="carrier-optus" id="carrier-2" class="custom">
+			<label for="carrier-2">Optus</label>
+
+			<input type="checkbox" name="carrier-aapt" id="carrier-3" class="custom">
+			<label for="carrier-3">AAPT</label>
+
+			<input type="checkbox" name="carrier-virgin" id="carrier-4" class="custom">
+			<label for="carrier-4">Virgin</label>
+			
+			<input type="checkbox" name="carrier-vodafone" id="carrier-5" class="custom">
+			<label for="carrier-5">Vodafone</label>
+								
+			<input type="checkbox" name="carrier-other" id="carrier-5" class="custom">
+			<label for="carrier-5">Other</label>
+
+		  </fieldset>
+		</div>
+	  </div>
+	  
+	  <!-- **** TAB - NEEDS **** -->
+	  <div id="walkin-needs" class="ui-body-d ui-content ui-content-fullpage">
+		
+		<select id="txtQueue" name="Requested_Skill" data-shadow="false" data-placeholder="true">
+			<option>Queue Name or Skill</option>
+			<option value="Activations">Activations</option>
+			<option value="Customer_Service">Customer Service</option>
+			<option value="Tech Support">Tech Support</option>
+			<option value="Care">Care</option>
+			<option value="Upgrades">Upgrades</option>
+			<option value="Devices">Devices</option>
+		</select>
+		
+		<div class="ui-field-contain">
+		  <fieldset data-role="controlgroup">
+			<legend>Choose one or more product groups</legend>
+			<input type="checkbox" name="product-sales" id="product-1" class="custom">
+			<label for="product-1">New product sales</label>
+
+			<input type="checkbox" name="product-addon" id="product-2" class="custom">
+			<label for="product-2">Add on</label>
+
+			<input type="checkbox" name="product-returns-defects" id="product-3" class="custom">
+			<label for="product-3">Returns and defects</label>
+
+			<input type="checkbox" name="service-activations" id="service-1" class="custom">
+			<label for="service-1">Activations</label>
+
+			<input type="checkbox" name="service-techsupport" id="service-2" class="custom">
+			<label for="service-2">Technical Support</label>
+
+			<input type="checkbox" name="product-escalations" id="service-3" class="custom">
+			<label for="service-3">Escalations</label>
+		  </fieldset>
+		</div>
+	  </div>
+		
+	  <!-- **** TAB - ACTIONS **** -->
+	  <div id="walkin-actions" class="ui-body-d ui-content ui-content-fullpage">
+			
+		<div class="ui-field-contain">
+		  <fieldset data-role="controlgroup"  data-type="horizontal">
+			<legend>Sales made from this interaction</legend>
+			<!-- <input type="radio" name="self-service" id="radio-choice-a1" value="NA" checked="checked" />
+			<label for="radio-choice-a1">N/A</label> -->
+			<input type="radio" name="sale_made" id="sale_made-choice-a2" value="No" checked="checked"/>
+			<label for="sale_made-choice-a2">No</label>
+			<input type="radio" name="sale_made" id="sale_made-choice-a3" value="Yes"/>
+			<label for="sale_made-choice-a3">Yes</label>
+		  </fieldset>
+		</div>
+		
+		<div class="ui-field-contain">
+		  <fieldset data-role="controlgroup"  data-type="horizontal">
+			<legend>Customer was able to self service</legend>
+			<!-- <input type="radio" name="self-service" id="radio-choice-a1" value="NA" checked="checked" />
+			<label for="radio-choice-a1">N/A</label> -->
+			<input type="radio" name="self-service" id="radio-choice-a2" value="No" checked="checked"/>
+			<label for="radio-choice-a2">No</label>
+			<input type="radio" name="self-service" id="radio-choice-a3" value="Yes"/>
+			<label for="radio-choice-a3">Yes</label>
+			<input type="radio" name="self-service" id="radio-choice-a4" value="Assisted"/>
+			<label for="radio-choice-a4">Yes - with assistance</label>
+		  </fieldset>
+		</div>
+		
+		<div class="ui-field-contain">
+		  <fieldset data-role="controlgroup" data-iconpos="right">
+			<legend>Send Self Service Email (Optional)</legend>
+			<input type="radio" name="SS_name" id="SS_name-1" value="Voicemail Setup">
+			<label for="SS_name-1">Voicemail Setup</label>
+			<input type="radio" name="SS_name" id="SS_name-2" value="Unlock your device">
+			<label for="SS_name-2">Unlock your device</label>
+			<input type="radio" name="SS_name" id="SS_name-3" value="Activate SIM">
+			<label for="SS_name-3">Activate SIM</label>
+			<input type="radio" name="SS_name" id="SS_name-4" value="International Roaming">
+			<label for="SS_name-4">International Roaming</label>
+		  </fieldset>
+		</div>
+		
+		<label for="txtNotes">Notes:</label>
+		<textarea name="Notes" id="txtNotes" rows="4"  placeholder="Notes"></textarea>
+		
+		  <table style="float:right" >
+			<tr>
+				<td><a readonly="true" data-inline="true" type="text" id="formPickupMessage" value="Not Submitted"/></td>
+				<td><input data-inline="true" type="button" id="btnWalkinReset" data-icon="delete" data-iconpos="right" value="Clear"/></td>
+				<td><input data-inline="true" type="button" id="btnWalkinCreate" data-icon="check" data-iconpos="right" class="ui-btn-b" value="Create"/></td>
+				<td><input data-inline="true" type="button" data-icon="forbidden" data-iconpos="right" value="Complete" class="btnCompleteWorkitem ui-btn-e" style="display:none"/></td>
+			</tr>
+		</table>
+	 </div>
+	 
+	</div>
+	
+	<input type="hidden" name="TaskType" value="Walk In"/>
+	<input type="hidden" name="concierge-fragment" value="walkin"/>
+	<input type="hidden" name="IWS_DisplayMessage" value="Incoming Walk In"/>
+	
+  </form>
+</div>
+
+
+		

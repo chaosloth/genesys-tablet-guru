@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-capable" content="yes" />
+        
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.0.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/conno-ios-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/mobile-layout.css" />
+        <title>Tablet Guru</title>
+    </head>
+    <body>
+    	
+    	<div id="splashscreen" style="width:100%; height:100%" >
+		    <img src="img/genesys-logo.png"/>
+		</div>
+        <!-- **** START INITIAL PAGE **** -->
+		<div id="start-page" data-role="page" style="">
+			<div id="firstDialog" >
+				<div id="introLogo" >
+					<img id="startLogoImg" src="images/genesys-logo.png"/>
+				</div>
+				<h3>Tablet Guru</h3>
+				<div style="color:red;" class="hideValidationErr" id="loginErr"><h2></h2></div>
+				<div class="clear" style="padding:10px;">
+					<label for="txtUsername">Username <span style="color:red;" id="nullUsername" class="hideValidationErr">Please provide a Username</span></label>
+					<input type="text" id="txtUsername" placeholder="Username">
+					
+					<label for="txtPlace">Place <span style="color:red;" id="nullPlace" class="hideValidationErr">Please provide a Place</span></label>
+					<input type="text" id="txtPlace" placeholder="Place">
+					
+					<label for="txtPassword">Password <span style="color:red;" id="nullPassword" class="hideValidationErr">Please provide a Password</span></label>
+					<input type="password" id="txtPassword" placeholder="Password">
+					
+					<label>Remember Me <input type="checkbox" id="chkbxRememberMe"/></label>
+				</div>
+				<button type="submit" name="btnLogin" value="login" id="btnLogin">Login</button>
+			</div>
+		</div>
+		<!-- **** END INITIAL PAGE **** -->	
+		
+		
+		<!-- **** START MAIN PAGE **** -->
+		<div id="main-page" data-role="page" data-fullscreen="true">
+		
+			<!-- **** HEADER **** -->
+			<div data-role="header" data-position="fixed" data-id="common-header" data-tap-toggle="false">
+				<a href="#main-page-left-nav" data-icon="bars" data-iconpos="notext">Menu</a>
+				<h1 style="padding:0px"><img class="ui-center-logo" src="images/genesys-logo.png"/></h1>
+				
+				
+				<div id="header-right-buttons" class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
+					<a class="concierge-phone-only" style="display:none" id="btnStopTask" data-position-to="window" data-role="button" data-icon="check" data-iconpos="right">Complete Interaction</a>
+					<a data-role="button" data-mini="true" class="btnAgentStatus"><select></select></a>
+					<a class="btn-logout concierge-phone-only" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-transition="pop" data-icon="delete" data-iconpos="right">Logout</a>
+					
+				</div>
+				
+			</div>
+			
+			<!-- **** START: PAGE LEFT MENU **** -->
+			<div data-role="panel" id="main-page-left-nav" data-display="overlay">
+				<ul data-role="listview" id="main-page-left-nav-ul"></ul>
+			</div>
+			<!-- **** END: PAGE LEFT MENU **** -->
+			
+			<!-- **** START INTERACTION DIALOG **** -->
+			<div data-role="popup" id="interaction-invite-dialog" data-dismissible="false">
+				<div data-role="header">
+					<h1 id="interaction-invite-title">Title</h1>
+				</div>
+				<div data-role="content" data-theme="a" class="ui-corner-bottom ui-content">
+					<div data-role="fieldcontain" class="interaction-invite-case">
+						<label><b>Message:</b> </label><input type="text" id="displaymessage" readonly/>
+					</div>
+					<div data-role="fieldcontain" class="interaction-invite-case">
+						<label><b>Task Type:</b> </label><input type="text" id="tasktype" readonly/>
+					</div>
+					<div data-role="fieldcontain" class="interaction-invite-case">
+						<label><b>User Type:</b> </label><input type="text" id="usertype" readonly/>
+					</div>
+					<label for="slider-time">Time remaining</label>
+					<input type="range" name="slider-time" id="slider-time" disabled="disabled" data-highlight="true" min="0" max="30" value="30">
+					<div class="ui-grid-b ui-responsive">
+							<div class="ui-block-a"><a data-role="button" id="btnAcceptWorkitem" data-theme="c" data-icon="check" data-iconpos="right">Accept</a></div>
+							<div class="ui-block-b"><a data-role="button" id="btnRejectWorkitem" data-theme="e" data-icon="delete" data-iconpos="right">Reject</a></div>
+					</div>
+				</div>
+			</div>
+			<!-- **** END INTERACTION DIALOG **** -->
+		
+			<!-- **** START: INTERACTION PREVIEW POPUP **** -->
+			<div data-role="popup" id="interaction-popup">
+				<div data-role="header">
+					<a id="btnRetrieve" href="#" data-role="button">Retrieve</a>
+					<h2 style="text-overflow:initial; width: 50%;">Message</h2>
+				</div>
+				<div data-role="content">
+					<div id="block" style="position: absolute; width:: 100%;"></div>
+					<iframe id="interaction-url" src="fragments/concierge/placeholder-interaction-preview.html"></iframe>
+				</div>
+			</div>
+			<!-- **** END: INTERACTION PREVIEW POPUP **** -->
+		
+			<!-- **** START: CONFIRM LOGOUT **** -->
+			<div data-role="popup" id="dialog-confirm-logout"  style="max-width:400px;max-height:300px;" class="ui-corner-all">
+				<div data-role="header" class="ui-corner-top">
+					<h1>Confirm Logout</h1>
+				</div> 
+				<div data-role="content" class="ui-corner-bottom ui-content"> 
+					<h3 class="ui-title">Are you sure you want to logout?</h3> 
+					<p>This action cannot be undone.</p>
+					<button id="btnLogoutConfirm" data-role="button" data-inline="true" data-theme="a">Logout</button> 
+					<button id="btnLogoutCancel" data-role="button" data-inline="true" data-transition="flow" data-overlay-theme="a">Cancel</button> 
+				</div>
+			</div>
+			<!-- **** END: CONFIRM LOGOUT **** -->
+			
+			<!-- **** START: CONFIRM **** -->
+			<div data-role="popup" id="dialog-confirm"  style="max-width:400px;max-height:300px;" class="ui-corner-all">
+				<div data-role="header" class="ui-corner-top">
+					<h1 class="ui-title"></h1>
+				</div> 
+				<div data-role="content" class="ui-corner-bottom ui-content"> 
+					<p></p> 
+				</div>
+				<div data-role="footer">
+					<button id="btnYes" data-role="button" data-theme="a">Yes</button> 
+					<button id="btnNo" data-role="button" data-transition="flow" data-overlay-theme="a">No</button> 
+				</div>
+			</div>
+			<!-- **** END: CONFIRM **** -->
+			
+			
+			<!-- Fragments will be dynamically inserted -->
+			<div id="concierge-views"></div>
+			
+			<!-- START: PAGE FOOTER -->
+			<div id="footer" data-role="footer" data-position="fixed" data-fullscreen="true">
+				<div data-role="navbar">
+					<ul>
+						<li><a id="workspaceBtn" data-role="tab" href="#" data-href="workspace-tab" class="ui-btn-active ui-state-persist" data-ajax="false">Workspace</a></li>
+						<li><a id="workbinBtn" data-role="tab" href="#" data-href="workbin-tab" data-ajax="false">Workbins</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- END: PAGE FOOTER -->
+			
+		</div>
+		<!-- **** END MAIN PAGE **** -->
+		
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/lib/require.js" data-main="js/boot"></script>
+        
+    </body>
+</html>

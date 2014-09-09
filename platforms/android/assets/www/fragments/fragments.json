@@ -1,0 +1,179 @@
+[
+    {
+        "id": "interactions",
+        "label": "Interactions",
+        "description" : "Active interactions show here",
+        "img": "img/icon-tick.png",
+        "src": "fragments/concierge/view-interactions.html",
+        "visible" : "false",
+        "enabled" : "false",
+        "inmenu" : "true",
+        "class" : "concierge-all-devices"
+    },
+    {
+        "id": "agentstate",
+        "label": "Agent State",
+        "description" : "Reason codes and logout",
+        "img": "img/icon-tick.png",
+        "src": "fragments/concierge/view-agentstate.html",
+        "visible" : "true",
+        "enabled" : "true",
+        "inmenu" : "true",
+        "class" : "concierge-all-devices"
+    },
+    {
+        "id": "expert",
+        "label": "Expert Skills",
+        "description" : "Find an expert",
+        "img": "img/icon-tick.png",
+        "src": "fragments/concierge/view-expert.html",
+        "visible" : "false",
+        "enabled" : "true",
+        "inmenu" : "true",
+        "class" : "concierge-all-devices"
+    },
+	{
+        "id": "coffee",
+        "label": "Coffee Order",
+        "description" : "Best cup in town",
+        "img": "img/icon-ab.png",
+        "src": "fragments/concierge/view-coffee.html",
+        "visible" : "false",
+        "enabled" : "false",
+        "inmenu" : "true",
+        "class" : "concierge-all-devices"
+    },
+	{
+        "id": "walkin",
+        "label": "Walk In",
+        "description" : "New task when customer enters the store",
+        "img": "img/icon-ab.png",
+        "src": "fragments/concierge/view-walkin.html",
+        "visible" : "false",
+        "enabled" : "true",
+        "inmenu" : "true",
+        "class" : "concierge-all-devices"
+    },
+    {
+        "id": "pickup",
+        "label": "Pick Up",
+        "description" : "Goods collections and appointments",
+        "img": "img/icon-ab.png",
+        "src": "fragments/concierge/view-pickup.html",
+        "visible" : "false",
+        "enabled" : "true",
+        "inmenu" : "true",
+        "class" : "concierge-all-devices"
+    },
+    {
+        "id": "training",
+        "label": "Training",
+        "description" : "Training",
+        "img": "img/icon-ab.png",
+        "src": "fragments/concierge/view-training.html",
+        "visible" : "false",
+        "enabled" : "true",
+        "inmenu" : "true",
+        "class" : "concierge-all-devices"
+    },
+    {
+        "id": "ewt",
+        "label": "Estimated Wait",
+        "description" : "Current waiting times acros departments",
+        "img": "img/icon-time.png",
+        "src": "fragments/concierge/view-ewt.html",
+        "visible" : "false",
+        "enabled" : "true",
+        "inmenu" : "true",
+        "class" : "concierge-all-devices"
+    },
+    {
+        "id": "online",
+        "label": "Online Bridge",
+        "description" : "Find out what happened online",
+        "img": "img/icon-online.png",
+        "src": "fragments/concierge/view-online.html",
+        "visible" : "false",
+        "enabled" : "true",
+        "inmenu" : "true",
+        "class" : "concierge-all-devices"
+    },
+    {
+        "id": "instore-experience",
+        "label": "InStore Experience",
+        "description" : "Real-time speech analytics cloud",
+        "img": "img/icon-prize.png",
+        "src": "fragments/concierge/view-instore.html",
+        "visible" : "false",
+        "enabled" : "false",
+        "inmenu" : "true",
+        "class" : "concierge-all-devices"
+    },
+    {
+        "id": "instore-coaching",
+        "label": "InStore Coaching",
+        "description" : "Real-time speech analytics cloud",
+        "img": "img/icon-prize.png",
+        "src": "fragments/concierge/view-coaching.html",
+        "visible" : "false",
+        "enabled" : "true",
+        "inmenu" : "true",
+        "class" : "concierge-all-devices"
+    },
+    {
+        "id": "journey",
+        "label": "Customer Journey",
+        "description" : "View the path your customers take with you",
+        "img": "img/icon-journey.png",
+        "src": "fragments/concierge/view-journey.html",
+        "visible" : "false",
+        "enabled" : "false",
+        "inmenu" : "true",
+        "class" : "concierge-all-devices"
+    },
+    {
+        "id": "surgar-crm",
+        "label": "Sugar CRM",
+        "description" : "Access customer information",
+        "img": "img/icon-web.png",
+        "src": "fragments/concierge/view-sugar.html",
+        "visible" : "false",
+        "enabled" : "false",
+        "inmenu" : "true",
+        "class" : "concierge-all-devices"
+    },
+    {
+        "id": "salesforce",
+        "label": "Salesforce.com",
+        "description" : "View lead assignements",
+        "img": "img/icon-web.png",
+        "src": "fragments/concierge/view-salesforce.html",
+        "visible" : "false",
+        "enabled" : "false",
+        "inmenu" : "true",
+        "class" : "concierge-all-devices"
+    },
+    {
+        "id": "bing",
+        "label": "Bing",
+        "description" : "Need to search? Bing it in...",
+        "img": "img/icon-web.png",
+        "src": "fragments/concierge/view-bing.html",
+        "data": "fragments/concierge/view-bing.json",
+        "visible" : "false",
+        "enabled" : "false",
+        "inmenu" : "true",
+        "class" : "concierge-all-devices"
+    },
+        {
+        "id": "settings",
+        "label": "Settings",
+        "description" : "Application configuration and settings",
+        "img": "img/icon-settings.png",
+        "src": "fragments/concierge/view-settings.html",
+        "visible" : "false",
+        "enabled" : "false",
+        "inmenu" : "true",
+        "class" : "concierge-all-devices"
+    }
+]

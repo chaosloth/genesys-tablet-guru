@@ -1,0 +1,110 @@
+<div class="clear" style="padding: 10px;">
+	 <!-- **** TABS **** -->
+	<div data-role="tabs" id="tabs-coffee">
+	  <div data-role="navbar">
+		<ul>
+		  <li><a id="coffee-tab-1" class="ui-btn-active ui-state-persist" href="#coffee-info" data-ajax="false">Coffee Details</a></li>
+		  <li><a href="#coffee-addon" data-ajax="false">Add ons</a></li>
+		  <li><a href="#coffee-notes" data-ajax="false">Notes</a></li>
+		</ul>
+	  </div>
+	  
+	  <form id="formCoffee" data-ajax="false">
+		
+		<!-- **** TAB - INFORMATION **** -->
+		<div id="coffee-info" class="ui-body-d ui-content ui-content-fullpage">
+
+			<div class="ui-block-a" style="padding:5px; width:50%">
+				<label for="txtPhoneNumber">Phone Number</label>
+				<input type="text" name="PhoneNumber" id="txtPhoneNumber" placeholder="Phone Number" />
+			</div>
+			<div class="ui-block-b" style="padding:5px; width:50%">
+				<label for="txtFirstName">First Name</label>
+				<input type="text" name="FirstName" id="txtFirstName" placeholder="Customer First Name" />
+			</div>
+			
+			<div class="ui-field-contain">
+			  <fieldset data-role="controlgroup">
+				<legend>What style of coffee?</legend>
+				<input type="checkbox" id="coffee-americano" name="coffee-americano" class="custom">
+				<label for="coffee-americano">Americano</label>
+
+				<input type="checkbox" id="coffee-espresso" name="coffee-espresso" class="custom">
+				<label for="coffee-espresso">Espresso</label>
+
+				<input type="checkbox" id="coffee-picolo" name="coffee-picolo" class="custom">
+				<label for="coffee-picolo">Picolo</label>
+
+				<input type="checkbox" id="coffee-macchiato" name="coffee-macchiato" class="custom">
+				<label for="coffee-macchiato">Macchiato</label>
+
+				<input type="checkbox" id="coffee-long-black" name="coffee-long-black" class="custom">
+				<label for="coffee-long-black">Long Black</label>
+
+				<input type="checkbox" id="coffee-cappuccino" name="coffee-cappuccino" class="custom">
+				<label for="coffee-cappuccino">Cappuccino</label>
+
+				<input type="checkbox" id="coffee-latte" name="coffee-latte" class="custom">
+				<label for="coffee-latte">Latte</label>
+
+				<input type="checkbox" id="coffee-hot-chocolate" name="coffee-hot-chocolate" class="custom">
+				<label for="coffee-hot-chocolate">Hot Chocolate</label>
+
+			  </fieldset>
+			</div>
+		</div>
+
+		<!-- **** TAB - ADDONS **** -->
+		<div id="coffee-addon" class="ui-body-d ui-content ui-content-fullpage">
+
+				<h3>Any customisations...</h3>
+				<div class="ui-field-contain">
+				  <fieldset data-role="controlgroup">
+					<legend>Choose one or more of the following</legend>
+					<input type="checkbox" id="coffee-double-shot" name="coffee-double-shot" class="custom">
+					<label for="coffee-double-shot">Double Shot</label>
+
+					<input type="checkbox" id="coffee-skim" name="coffee-skim" class="custom">
+					<label for="coffee-skim">Skim Milk</label>
+
+					<input type="checkbox" id="coffee-1-sugar" name="coffee-1-sugar" class="custom">
+					<label for="coffee-1-sugar">1 Sugar</label>
+
+					<input type="checkbox" id="coffee-2-sugar" name="coffee-2-sugar" class="custom">
+					<label for="coffee-2-sugar">2 Sugar</label>
+				  </fieldset>
+				</div>
+
+		</div>
+		
+		<!-- **** TAB - PICKUP PICTURE AND NOTES **** -->
+		<div id="coffee-notes" class="ui-body-d ui-content ui-content-fullpage">
+			<!--  ** FUTURE ADD CAMERA **
+			<label for="btnTakePhoto">Photo</label>
+			<button class="btnTakePhoto" data-ajax="false">Take happy snap!</button>
+			-->
+			<br/>
+			<label for="txtNotes">Notes:</label>
+			<textarea name="Notes" id="txtNotes" rows="4"  placeholder="Notes"></textarea>
+
+			
+			<table style="float:right" >
+				<tr>
+					<td><a readonly="true" data-inline="true" type="text" id="formPickupMessage" value="Not Submitted"/></td>				
+					<td><input data-inline="true" type="button" id="btnCoffeeCancel" data-icon="delete" data-iconpos="right" value="Clear"/></td>
+					<td><input data-inline="true" type="button" id="btnCoffeeCreate" data-icon="check" data-iconpos="right" class="ui-btn-b"  value="Create"/></td>
+					<td><input data-inline="true" type="button" data-icon="forbidden" data-iconpos="right" value="Complete" class="btnCompleteWorkitem ui-btn-e" style="display:none"/></td>
+				</tr>
+			</table>
+		</div>
+		
+		<!-- **** HIDDEN FIELDS **** -->
+		<input type="hidden" id="txtPickupOpportunityValue" name="opportunity_value" value="0"/>
+		<input type="hidden" name="TaskType" value="Coffee Order"/>
+		<input type="hidden" name="concierge-fragment" value="coffee"/>
+		<input type="hidden" name="IWS_DisplayMessage" value="Customer Coffee Order"/>
+
+	 </form>
+ 	</div>
+ 	
+</div>

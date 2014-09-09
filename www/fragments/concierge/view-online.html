@@ -1,0 +1,37 @@
+<div data-role="content" class="ui-body-d ui-content ui-content-fullpage">
+
+	<div class="ui-block-a" style="padding:5px; width:35%">
+		<label for="txtScanPhoneNumber">Phone number:</label>
+		<input type="text" name="PhoneNumber" id="txtScanPhoneNumber" placeholder="Phone Number" />
+		<a id="btnScan" class="btnScan" data-role="button" data-inline="true" data-theme="b">Scan</a>
+		<a id="btnSearch" data-inline="true" data-role="button" data-theme="a">Search</a>
+		<a id="btnAssociate" data-inline="true" data-role="button" data-theme="c">Associate</a>
+		<a id="btnRefreshJourney" data-inline="true" data-role="button" data-theme="c">Refresh</a>
+		<p><span id="message"></span></p><br/>
+		<p>Coupon ID: <br/><span id="barcode-result"></span></p>
+		<br/>
+	</div>
+
+	
+	<div class="ui-block-b" style="padding:5px; width:65%">
+		<ul id="customer-details-listview" data-role="listview" data-inset="true">
+			<li data-role="list-divider">Customer Details</li>
+			<li>Customer details will show here after identification</li>
+			<li>Enter the customer's phone number and then press <strong>Search</strong></li>
+		</ul>
+		
+		<ul id="list-journey-active" data-role="listview" data-inset="true" data-theme="b">
+			<li data-role="list-divider">Customer Online Journey - Active States</li>
+			<li>First press <strong>Scan</strong> button</li>
+			<li>And then <strong>Associate</strong> the customer record</li>
+		</ul>
+		
+		<ul id="list-journey-complete" data-role="listview" data-inset="true" data-theme="e">
+			<li data-role="list-divider">Customer Online Journey - Completed States</li>
+			<li>First press <strong>Scan</strong> button</li>
+			<li>And then <strong>Associate</strong> the customer record</li>
+		</ul>
+		
+	</div>
+
+</div>

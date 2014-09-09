@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-capable" content="yes" />
+        
+		<link rel="shortcut icon" sizes="196x196" href="img/logo-196.png"/>
+		<link rel="shortcut icon" sizes="128x128" href="img/logo-128.png"/>
+		<link rel="apple-touch-icon" sizes="196x196" href="img/logo-196.png"/>
+		<link rel="apple-touch-icon" sizes="128x128" href="img/logo-128.png"/>
+		
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.0.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/conno-ios-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/mobile-layout.css" />
+        <title>Training</title>
+    </head>
+    <body>
+    	
+		<!-- **** START MAIN PAGE **** -->
+		<div id="main-page" data-role="page" data-fullscreen="true">
+		
+			<!-- **** HEADER **** -->
+			<div data-role="header" data-position="fixed" data-id="common-header" data-tap-toggle="false">
+				<h1 style="padding:0px"><img height="70" style="padding:5px" src="img/icon-guru.png"/></h1>
+			</div>
+			
+			<div data-role="content">
+
+				<!-- START: TRAINING CONTENT A -->
+				<div class="ui-block-a" style="padding:5px; width:60%">
+					
+					<h3>Plan A</h3>
+					<p>Send training content for Plan A</p>
+				</div>
+
+				<div class="ui-block-b" style="padding:5px; width:40%">
+					<a id="btnCreateA" data-role="button" data-theme="a" data-plan="a">Send training item</a>
+				</div>
+				<!-- END: TRAINING CONTENT A -->
+
+
+				<!-- START: TRAINING CONTENT B -->
+				<div class="ui-block-a" style="padding:5px; width:60%">
+					<h3>Plan B</h3>
+					<p>Send training content for Plan B</p>
+				</div>
+
+				<div class="ui-block-b" style="padding:5px; width:40%">
+					<a id="btnCreateB" data-role="button" data-theme="a" data-plan="b">Send training item</a>
+				</div>
+				<!-- END: TRAINING CONTENT B -->
+
+
+				<!-- START: TRAINING CONTENT C -->
+				<div class="ui-block-a" style="padding:5px; width:60%">
+					<h3>Plan C</h3>
+					<p>Send training content for Plan C</p>
+				</div>
+
+				<div class="ui-block-b" style="padding:5px; width:40%">
+					<a id="btnCreateC" data-role="button" data-theme="a" data-plan="c">Send training item</a>
+				</div>
+				<!-- END: TRAINING CONTENT C -->
+
+				<div class="ui-block-a" style="padding:5px; width:100%">
+					<label for="statusMessage">Status</label>
+					<input type="text" id="statusMessage" placeholder="Status message" />
+					<center><img class="ui-center-logo" src="images/genesys-logo.png"/></center>
+				</div>
+
+
+			</div>
+
+		</div>
+		<!-- **** END MAIN PAGE **** -->
+		
+        <script type="text/javascript" src="js/lib/require.js" data-main="js/boot.lite"></script>
+        
+    </body>
+</html>
